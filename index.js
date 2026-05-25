@@ -12,7 +12,7 @@
      const code = Math.random().toString(36).substring(2, 8);
 
      await db.query('INSERT INTO urls (code,long_url) VALUES ($1, $2)', [code, longurl]);
-     res.json({ short_url: `http://localhost:3000/${code}` })
+     res.json({short_url:`${req.protocol}://${req.get('host')}/${code}`})
  });
 
 app.get('/:code' , async(req, res) => {
