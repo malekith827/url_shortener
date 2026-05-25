@@ -21,7 +21,7 @@ app.get('/:code' , async(req, res) => {
     const result =await db.query('SELECT long_url FROM urls WHERE code = $1', [code]);
 
     if(result.rows.length === 0) {
-        return res.status(404).send('URL not found');
+        return res.status(404).send('URL not fgound');
     }
 
     await db.query('UPDATE urls SET clicks = clicks + 1 WHERE code = $1', [code]);
