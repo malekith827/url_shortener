@@ -28,10 +28,6 @@ Database:
 Deployment:
 - Render
 
-## Live Demo
-
-https://your-app.onrender.com
-
 ## API Endpoints
 
 ### Create Short URL
